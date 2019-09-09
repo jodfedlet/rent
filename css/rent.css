@@ -69,7 +69,7 @@ header h1 {
 
 /******************************************************************** menu superior */
 .menu-opcoes {
-	/*display: none;*/
+	display: none;
 }
 
 .menu-opcoes ul {
@@ -286,7 +286,11 @@ footer {
    /* .col-1 {flex: 20%;}
     .col-2 {flex: 60%;}
     .col-3 {flex: 20%;}*/
-  
+    
+    #exibe-menu{
+      display: none;
+    }
+
     .menu-opcoes {
         position: absolute;
         bottom: 0;
