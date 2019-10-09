@@ -1,60 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="utf-8">
-	<title>Rent a Tool</title>
-	<link rel="stylesheet" type="text/css" href="css/rent.css">
-	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> <!-- web font Lobster -->
-</head>
-<body>
-	<!-- cabeçalho -->
-	<header>
-		<h1>Rent a Tool</h1>
-		<div id="menu-login">
-			<span id="login">Olá, visitante! (<a href="login.html">login</a>)</span>
-			<span id="carrinho"><a href="#">Meu carrinho <span id="numItensCarrinho">(2)</span><img src="img/cart.png" width="32" alt="carrinho de compras"></a></span>			
-		</div>
-        <p id="exibe-menu">Menu</p>
-		<nav class="menu-opcoes">    
-			<ul>
-				<li><a href="login.html">Minha Conta</a></li>
-				<li><a href="#">Programa de pontos</a></li>
-				<li><a href="#">Consumo solidário</a></li>
-				<li><a href="#">Quem somos</a></li>
-				<li><a href="#">Ajuda</a></li>
-			</ul>
-		</nav>
-	</header>
-	<!-- fim cabeçalho -->
-
+<?php include "includes/cabecalho.php"; ?>
 	<!-- area central com 3 colunas -->
 	<div class="container">
-		<section class="col-1">
-			<section class="busca">
-				<form>
-					<input type="search" placeholder="Busca..." name="busca">
-					<button>OK</button>
-				</form>
-			</section>
-
-			<section class="menu-categorias">
-				<h2>Categorias</h2>
-				<nav>
-					<ul>
-						<li><a href="#">Marcenaria</a></li>
-						<li><a href="#">Jardinagem</a></li>
-						<li><a href="#">Limpeza</a></li>
-						<li><a href="#">Escritório</a></li>
-						<li><a href="#">Mecânica</a></li>						
-					</ul>
-				</nav>
-			</section>
-		</section>	
-
+	<?php include "includes/menu_lateral.php"; ?>	
 		<section class="col-2">
 			<h2>Novidades</h2>
-
 			<!-- container de produtos -->
 			<div class="lista-produtos">
 				<!-- um produto -->
@@ -64,7 +13,7 @@
                             <img src="img/produtos/serra.jpg" alt="Serra Elétrica">
                             <figcaption>Serra Elétrica
                             <br>De <span class="precoInicial">R$ 40,00</span> por <span class="precoFinal">R$ 20,00</span>
-                            </figcaption>                                                                     
+                            </figcaption>                                                                    
                         </figure>   
                     	</a>
                         <p class="noCarrinho">no carrinho!</p>                                            
@@ -243,63 +192,7 @@
 
 			</div>	<!-- fim lista produtos -->		
 		</section>
-		<aside class="col-3">
-			<h2>Mais pedidos</h2>
-			<!-- container de mais pedidos -->
-			<div class="lista-produtos">
-			
-				<!-- um produto -->
-                     <div class="produto">     
-                     <a href="#">                 
-                        <figure>
-                            <img src="img/produtos/projetor.jpg" alt="Projetor multimídia">
-                            <figcaption>Projetor multimídia
-                            <br><span class="precoFinal">R$ 20,00</span>
-                            </figcaption>
-                        </figure>        
-                        </a>            
-                    </div>
-				<!-- fim produto -->					
-				
-				<!-- um produto -->
-                     <div class="produto"> 
-                     <a href="#">                     
-                        <figure>
-                            <img src="img/produtos/computador.jpg" alt="Computador">
-                            <figcaption>Computador
-                            <br><span class="precoFinal">R$ 20,00</span>
-                            </figcaption>
-                        </figure>    
-                        </a>                
-                    </div>
-				<!-- fim produto -->	
-						
-				<!-- um produto -->
-                     <div class="produto">  
-                     <a href="#">                    
-                        <figure>
-                            <img src="img/produtos/default.jpg" alt="Notebook">
-                            <figcaption>Notebook
-                            <br>De <span class="precoInicial">R$ 40,00</span> por <span class="precoFinal">R$ 20,00</span>
-                            </figcaption>
-                        </figure>     
-                        </a>               
-                    </div>
-				<!-- fim produto -->	
-
-			</div>									
-			<!-- adicione mais produtos --> 
-		</aside>
+        <?php include "includes/mais_vendidos.php"; ?>
 	</div>
 	<!-- fim area central -->
-	<footer><p>Rent a Tool - Chapecó/SC</p>
-		<ul class="social">
-			<li><a href="http://facebook.com/rentatool"><img src="img/facebook.png" alt="Facebook"></a></li>
-			<li><a href="http://twitter.com/rentatool"><img src="img/twitter.png" alt="Twitter"></a></li>
-		</ul>
-		<div id="ajuda">Precisa de ajuda? <span id="fechar">x</span></div>
-	</footer>
-	<!-- fim rodape -->
-    <script src="js/index.js"></script>
-</body>
-</html>
+	<?php include "includes/rodape.php"; ?>
