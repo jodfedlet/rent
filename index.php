@@ -5,6 +5,8 @@
 		<section class="col-2">
 			<?php	
             require_once "classes/Produto.php";
+            require_once "includes/functions.php";
+
             $produto = new Produto();
 
             // controller
@@ -12,6 +14,10 @@
               $lista = $produto->filtroBusca($_GET['busca']);
               $titulo = 
               "Resultado da busca por \"{$_GET['busca']}\" ";
+            }
+            elseif(isset($_GET['cat'])){
+              $lista = $produto->filtroCategoria($_GET['cat']);
+              $titulo = $CATEGORIAS[$_GET['cat']];
             }
             else{
               $lista = $produto->filtroNovidades();
