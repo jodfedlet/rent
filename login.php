@@ -6,7 +6,7 @@
 		<section class="col-2">
 			<h2>Minha conta</h2>
 			<div>
-				<form action="" method="post" id="form-contato">
+				<form action="autenticacao.php" method="post" id="form-contato">
 					<fieldset>
 						<legend><strong>Já possui cadastro?</strong></legend>
 					    <div class="form-item">
