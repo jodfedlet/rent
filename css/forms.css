@@ -13,14 +13,14 @@ input[type="text"], input[type="email"], input[type="password"], select, textare
 	padding: 3px;
 }
 
-input[type="submit"]{
+input[type="submit"], input[type="button"],{
 	background-color: #5995DA;
 	color: white;
 	padding: 3px 20px;
 	border: none;
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover, input[type="button"]:hover,{
 	box-shadow: 2px 2px 2px #000;
 	cursor: pointer;
 }

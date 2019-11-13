@@ -175,13 +175,13 @@ div.produto a{
   color: #666;
 }
 
-div.produto .precoInicial{
+.precoInicial{
   font-weight: bold;
   text-decoration: line-through;
   color: gray;
 }
 
-div.produto .precoFinal{
+.precoFinal{
   font-weight: bold;
   color: red;
 }
@@ -309,3 +309,28 @@ footer {
       display: initial;
     }
 }  
+
+/* detalhes produto */
+
+div.detalhes-produto img{
+  max-width: 50%;
+  float: left;
+  margin: 10px;
+}
+    
+div.detalhes-produto .form{
+  float: left;
+}
+
+div.detalhes-produto span.precoFinal{
+  font-size: 1.5em;
+  display: block;
+}
+
+div.detalhes-produto .detalhes{
+  clear: left;
+}
+
+.cat-names{
+  color: #999;
+}
