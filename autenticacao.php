@@ -16,6 +16,13 @@ else{ // usuario existe
 		$_SESSION['nome'] = $dados[0]['nome']; 
 		$_SESSION['id'] =  $dados[0]['id'];
 		$_SESSION['endereco'] = $dados[0]['endereco'] .", ".$dados[0]['bairro'];
+		if(isset($_POST['lembrar'])){
+			$expira = time() + 60 * 60 * 24 * 7;
+			setcookie("nome", $dados[0]['nome'], $expira);
+			setcookie("id", $dados[0]['id'], $expira);
+			setcookie("endereco", $dados[0]['endereco'] .", ".$dados[0]['bairro'], $expira);
+		}
+	
 		header("Location: index.php");
 	}
 }

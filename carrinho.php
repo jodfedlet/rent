@@ -28,7 +28,7 @@
 						<td class="celulaValor">R$ <span id="unitario<?=$id;?>"><?=str_replace(".", ",", number_format($item['valorFinal'], 2));?></span></td>
 						<td><input type="number" value="<?=$item['quantidade'];?>" min="1" onchange="atualizaValor(<?=$id;?>, document.getElementById('unitario<?=$id;?>').innerHTML, this.value)"></td>
 						<td class="celulaValor">R$ <span id="total<?=$id;?>" class="totalUni"><?=str_replace(".", ",", number_format($item['valorFinal'] * $item['quantidade'], 2));?></span></td>
-						<td>X</td>
+						<td><a href="exclui.php?id=<?=$id;?>">X</a></td>
 					</tr>
 					<?php
 					}

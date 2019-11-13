@@ -1,5 +1,10 @@
 <?php 
 session_start();
+if(isset($_COOKIE['nome'])){
+	$_SESSION['nome'] = $_COOKIE['nome'];
+	$_SESSION['id'] = $_COOKIE['id'];
+	$_SESSION['endereco'] = $_COOKIE['endereco'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -9,6 +14,7 @@ session_start();
 	<title>Rent a Tool</title>
 	<link rel="stylesheet" type="text/css" href="css/rent.css">
 	<link rel="stylesheet" type="text/css" href="css/forms.css">
+	<link rel="stylesheet" type="text/css" href="css/carrinho.css">
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> <!-- web font Lobster -->
 </head>
 <body>
@@ -28,7 +34,7 @@ session_start();
 			<?php
 			}
 			?>
-			<span id="carrinho"><a href="#">Meu carrinho <span id="numItensCarrinho">(2)</span><img src="img/cart.png" width="32" alt="carrinho de compras"></a></span>			
+			<span id="carrinho"><a href="carrinho.php">Meu carrinho <span id="numItensCarrinho">(<?=isset($_SESSION['carrinho'])?count($_SESSION['carrinho']):"0";?>)</span><img src="img/cart.png" width="32" alt="carrinho de compras"></a></span>			
 		</div>
         <p id="exibe-menu">Menu</p>
 		<nav class="menu-opcoes">    

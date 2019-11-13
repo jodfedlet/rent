@@ -10,7 +10,7 @@
         ?>
         <!-- um produto -->
         <div class="produto">    
-            <a href="#">                  
+            <a href="produto.php?id=<?=$lista[$n]['id'];?>">                  
                 <figure>                           
                     <img src="img/produtos/<?=mostraImagem($lista[$n]['imagem']);?>" alt="<?=$lista[$n]['nome'];?>">
                     <figcaption><?=$lista[$n]['nome'];?>
