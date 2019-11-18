@@ -36,8 +36,17 @@
                     ?>
                     </figcaption>                          
                 </figure>      
-            </a>              
-            <p class="rapida">compra rápida</p>
+            </a>
+            <?php
+            if(@array_key_exists($lista[$n]['id'], $_SESSION['carrinho'])){
+                echo "<p class='noCarrinho'>no carrinho!</p>";
+            }
+            else{
+                $preco = $lista[$n]['valor'] - $lista[$n]['desconto'];
+                echo "<p class='rapida' id='{$lista[$n]['id']}' 
+                onclick=\"compraRapida({$lista[$n]['id']}, '{$lista[$n]['nome']}', $preco)\">compra rápida</p>";
+            }
+            ?>               
         </div>   
         <!-- fim produto -->       
         <?php  
@@ -45,3 +54,4 @@
     }
     ?>
 </div> <!-- fim lista produtos -->
+<script src="js/rapida.js"></script>
