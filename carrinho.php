@@ -49,7 +49,8 @@
 				<br>
 				<div class="botoes">
 					<a href="index.php"><input type="button" name="" value ="Continuar comprando"></a>
-					<input type="submit" name="" value ="Finalizar pedido"></a>
+					<input type="submit" name="finalizar" value ="Finalizar pedido" 
+					onclick="return confirm('Tem certeza de que deseja finalizar seu pedido?')"></a>
 				</div>
 			</form>	
 			<?php
